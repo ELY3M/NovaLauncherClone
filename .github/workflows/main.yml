@@ -22,6 +22,7 @@ jobs:
           submodules: true
       - uses: actions/setup-java@v4
         with:
+          distribution: 'zulu'
           java-version: 1.8
       - uses: gradle/actions/setup-gradle@v3
         with:

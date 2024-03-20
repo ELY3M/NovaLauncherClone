@@ -31,6 +31,7 @@ jobs:
           
       - name: Build APK
         run: |
+            chmod +x gradlew
             ./gradlew assembleRelease
         
       - name: current dir

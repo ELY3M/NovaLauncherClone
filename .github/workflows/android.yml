@@ -1,10 +1,6 @@
 name: Android CI
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+on: [push, pull_request, workflow_dispatch, workflow_call]
 
 jobs:
   build:
@@ -13,11 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: set up JDK 11
+    - name: set up JDK
       uses: actions/setup-java@v3
       with:
-        java-version: '11'
-        distribution: 'temurin'
+        java-version: '21'
+        distribution: 'zulu'
         cache: gradle
 
     - name: Grant execute permission for gradlew

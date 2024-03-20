@@ -30,7 +30,8 @@ jobs:
           gradle-home-cache-cleanup: true
           
       - name: Build APK
-        run: ./gradlew assembleLawnWithQuickstepGithubRelease
+        run: |
+            ./gradlew assembleRelease
         
       - name: current dir
         run: | 
